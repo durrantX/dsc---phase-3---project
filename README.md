@@ -281,7 +281,7 @@ The following are perfectly correlated due to the direct relationship between ch
 - In the testing  set the proportion  of churned customers to not churned  is 143 to 857
 - To address class imbalance Synthetic Minority Oversampling is used 
 
-# Address class imbalance using SMOTE 
+**Address class imbalance using SMOTE**
 
     0    1993
     1     340
@@ -329,8 +329,8 @@ The following metrics will be used to evaluate the classifiers for both the trai
 This section provides a comparison of four different classification models utilizing different evaluation metrics.
 
                    
-| Model                   | Precision | Recall    | F1 Score | Accuracy | AUC Score    |
-|------------------- -----|-----------|-----------|----------|----------|--------------|
+| Model              | Precision | Recall    | F1 Score | Accuracy | AUC Score    |
+|--------------------|-----------|-----------|----------|----------|--------------|
 | Logistic Regression| 0.56      | 0.17      | 0.26     | 0.86     | **0.7453**   |
 | KNN                | 0.70      | **0.41**  | **0.51** | 0.89     | 0.6882       |    
 | Decision Tree      | 0.75      | 0.39      | **0.51** | 0.858    |0.6847        |
