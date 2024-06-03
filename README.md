@@ -194,18 +194,10 @@ Business implication
 
 **Usage Churn  Analysis**
 
-
-
-
-
-
-
+```
     total day charge    101864.17
     churn                  483.00
     dtype: float64
-
-
-
 
     Churn counts:
     0    2850
@@ -225,7 +217,7 @@ Business implication
     churn
     0    25667.31
     1     4460.76
-    Name: total night charge, dtype: float64
+    Name: total night charge, dtype: float64 ```
     
 
 
@@ -275,10 +267,10 @@ The following are perfectly correlated due to the direct relationship between ch
 # Preprocessing
 - Prepare data for modeling
 - **Create training and testing sets**
- - Define the predictor and target variables
- - Perform a standard train-test split. 
- - Assign 30% to the test set 
- - Set random_state ensuring  that the split is reproducible
+   - Define the predictor and target variables
+   - Perform a standard train-test split. 
+   - Assign 30% to the test set 
+   - Set random_state ensuring  that the split is reproducible
 - **Evaluate class imbalance**
 
   ```Train:
@@ -303,25 +295,20 @@ The following are perfectly correlated due to the direct relationship between ch
     0    1993
     1     340
     Name: churn, dtype: int64
-    
-    
     1    1993
     0    1993
     Name: churn, dtype: int64```
     
-
 - **Scaling**
  * Transform the numerical features of the dataset to a similar scale 
 
 ## 2. Modeling
-
-##   Model Development 1: Logistic Regression
-
-Build and evaluate a baseline Logistic Regression
-
-
-
-# Evaluation of the models
+- Build and evaluate four models
+  -  LogisticRegression
+  -  DecisionTreeClassifier
+  -  KNN
+  -  Random Forest  
+- **Evaluation of the models**
 The following metrics will be used to evaluate the classifiers for both the training and test sets.
  - Precision: measures how accurate the positive predictions are.
  - Recall:  measures the model's ability to find all the relevant cases (positive cases)
@@ -341,158 +328,12 @@ The following metrics will be used to evaluate the classifiers for both the trai
  -  ROC curve evaluates how well the model discriminates between classes
  -  Instrumental in comparing the effectiveness of different models
 
-   **Evaluate the Logistic Regression predictive performance**
-  
-   
-
-
-
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.87      0.98      0.92      1993
-               1       0.54      0.13      0.21       340
-    
-        accuracy                           0.86      2333
-       macro avg       0.71      0.56      0.57      2333
-    weighted avg       0.82      0.86      0.82      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.88      0.98      0.93       857
-               1       0.59      0.17      0.26       143
-    
-        accuracy                           0.86      1000
-       macro avg       0.73      0.57      0.59      1000
-    weighted avg       0.83      0.86      0.83      1000
-    
-    Confusion Matrix:
-     [[840  17]
-     [119  24]]
-    
-
-     
-
-# Model Development 2: DecisionTreeClassifier
-
-
-
-**Evaluate the DecisionTreeClassifier predictive performance**
-
-    
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       1.00      0.91      0.95      2183
-               1       0.43      0.98      0.60       150
-    
-        accuracy                           0.92      2333
-       macro avg       0.72      0.95      0.78      2333
-    weighted avg       0.96      0.92      0.93      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.91      0.98      0.94       857
-               1       0.75      0.39      0.51       143
-    
-        accuracy                           0.89      1000
-       macro avg       0.83      0.68      0.73      1000
-    weighted avg       0.88      0.89      0.88      1000
-    
-    Confusion Matrix:
-     [[838  19]
-     [ 87  56]]
-    
-
-Model Comparison
-Compare to the logistic regression model the decision tree has higher accuracy, lower AUC and lower false negatives . 
-
-# Model Development 3: KNN
-
-
-**Evaluate the KNN predictive performance**
-
-
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.91      0.99      0.95      1993
-               1       0.85      0.42      0.56       340
-    
-        accuracy                           0.90      2333
-       macro avg       0.88      0.70      0.75      2333
-    weighted avg       0.90      0.90      0.89      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.90      0.98      0.94       857
-               1       0.73      0.36      0.48       143
-    
-        accuracy                           0.89      1000
-       macro avg       0.81      0.67      0.71      1000
-    weighted avg       0.88      0.89      0.87      1000
-    
-    Confusion Matrix:
-     [[838  19]
-     [ 92  51]]
-    
-
-# Model Development 4: Random Forest 
-Random forest ensemble method
-
-
-# **Evaluate the Random Forest predictive performance**
-
-
-
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.90      1.00      0.95      1993
-               1       1.00      0.38      0.55       340
-    
-        accuracy                           0.91      2333
-       macro avg       0.95      0.69      0.75      2333
-    weighted avg       0.92      0.91      0.89      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.90      0.99      0.94       857
-               1       0.88      0.31      0.46       143
-    
-        accuracy                           0.90      1000
-       macro avg       0.89      0.65      0.70      1000
-    weighted avg       0.89      0.90      0.87      1000
-    
-    Confusion Matrix:
-     [[851   6]
-     [ 98  45]]
-    
-    
-
 # Analysis of  models performances and final model selection
  
 
 **Model Comparison**
 
 This section provides a comparison of four different classification models utilizing different evaluation metrics.
-
 
                    
 | Model                   | Precision | Recall   | F1 Score | Accuracy | AUC Score    |
