@@ -86,6 +86,7 @@ Various classifiers and evaluation metrics will be used to objectively select th
 * Assess market segmentation to align with the company's goals of enhancing subscriber retention
 
 # Churn Distribution Analysis
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/3faa361d-c8dc-41fc-9854-3f2e58c27d73)
 
     
 ![png](output_16_0.png)
@@ -114,8 +115,9 @@ To address the imbalance issues resampling such as SMOTE will be considered
 # Area Code Distribution Analysis
 
     
-![png](output_18_0.png)
+
     
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/e4792a4a-269c-4672-9c0b-d5562fe0e11d)
 
 
 **Area Code Distribution Analysis**
@@ -125,6 +127,7 @@ To address the imbalance issues resampling such as SMOTE will be considered
 
 # Boxplot to see which area code has the highest churn
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/41b21498-3c46-4b8f-abd1-1c67ef28da71)
 
     
 ![png](output_20_1.png)
@@ -155,9 +158,10 @@ Business implication
 
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/c538047f-9a96-47bb-9e1d-08f82b5ca1c4)
 
     
-![png](output_23_1.png)
+
     
 
 
