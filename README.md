@@ -305,6 +305,7 @@ The following are perfectly correlated due to the direct relationship between ch
   -  KNN
   -  Random Forest  
 - **Evaluation of the models**
+  
 The following metrics will be used to evaluate the classifiers for both the training and test sets.
  - Precision: measures how accurate the positive predictions are.
  - Recall:  measures the model's ability to find all the relevant cases (positive cases)
@@ -334,10 +335,10 @@ This section provides a comparison of four different classification models utili
                    
 | Model                   | Precision | Recall    | F1 Score | Accuracy | AUC Score    |
 |------------------- -----|-----------|-----------|----------|----------|--------------|
-| **Logistic Regression** | 0.56      | 0.17      | 0.26     | 0.86     | **0.7453**   |
-| **KNN**                 | 0.70      | **0.41**  | **0.51** | 0.89     | 0.6882       |    
-| **Decision Tree**       | 0.75      | 0.39      | **0.51** | 0.858    |0.6847        |
-| **Random Forest**       | **0.88**  | 0.31      | 0.46     | **0.90** |0.6538        |
+| Logistic Regression| 0.56      | 0.17      | 0.26     | 0.86     | **0.7453**   |
+| KNN                | 0.70      | **0.41**  | **0.51** | 0.89     | 0.6882       |    
+| Decision Tree      | 0.75      | 0.39      | **0.51** | 0.858    |0.6847        |
+| Random Forest       | **0.88**  | 0.31      | 0.46     | **0.90** |0.6538        |
   
 
 
@@ -435,38 +436,10 @@ rf_param_grid = {
 model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_samples_leaf= 3, 
                                   min_samples_split= 5, n_estimators= 100, bootstrap=False, max_features= 'auto', random_state= 42)
 
-# Update Random Forest snapshot of comprehensive metrics
-
-
-
-# Calculate evaluation metrics with confusion matrices 
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.97      1.00      0.98      1993
-               1       1.00      0.81      0.90       340
-    
-        accuracy                           0.97      2333
-       macro avg       0.98      0.91      0.94      2333
-    weighted avg       0.97      0.97      0.97      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.92      0.98      0.95       857
-               1       0.80      0.49      0.61       143
-    
-        accuracy                           0.91      1000
-       macro avg       0.86      0.73      0.78      1000
-    weighted avg       0.90      0.91      0.90      1000
-    
-    Confusion Matrix:
-     [[839  18]
-     [ 73  70]]
-    
-
+  # Update Random Forest
+  - Snapshot of comprehensive metrics
+  - Calculate evaluation metrics with confusion matrices 
+  - Evalute using the AUC ROC curve
 
 # Plot the Confusion Matrix
 
@@ -474,18 +447,10 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 
     ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/27ecf82e-f435-4163-8a66-605dcfad3579)
 
-    
-
-# Evalute using the AUC ROC curve
-
-
 
 # Plot ROC curve
 
     ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/5adb6ae4-87a3-425d-a757-22e6dda0fc14)
-
-    
-
 
 # Model Improvement Analysis 
 
@@ -548,7 +513,7 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 
 feature_importances
 
-
+'''
     area code_408             0.004551
     area code_510             0.004961
     area code_415             0.008124
