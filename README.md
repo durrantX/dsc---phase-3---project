@@ -384,62 +384,13 @@ These comparisons assists in determining the appropriate model based on the spec
 
 **Hyperparameter Tuning** 
 
-- GridSearchCV: to obtain the best parameters for the model 
-
-
-
-# Baseline random forest parameters
-rf.get_params()
-```
-    {'bootstrap': True,
-     'ccp_alpha': 0.0,
-     'class_weight': None,
-     'criterion': 'gini',
-     'max_depth': 5,
-     'max_features': 'auto',
-     'max_leaf_nodes': None,
-     'max_samples': None,
-     'min_impurity_decrease': 0.0,
-     'min_impurity_split': None,
-     'min_samples_leaf': 1,
-     'min_samples_split': 2,
-     'min_weight_fraction_leaf': 0.0,
-     'n_estimators': 100,
-     'n_jobs': None,
-     'oob_score': False,
-     'random_state': 1,
-     'verbose': 0,
-     'warm_start': False}
-
-
-
-```python
-rf_param_grid = {
-    "n_estimators": [10, 30, 100],
-    "criterion": ["gini", "entropy"],
-    "max_depth": [None, 2, 6, 10],
-    "min_samples_split": [5, 10],
-    "min_samples_leaf": [3, 6],
-    'max_features': ['auto', 'sqrt', 'log2'],
-    'bootstrap': [True, False],
-    'random_state':[42]
-}
-
-`
-
-    Testing Accuracy: 90.40%
-    
-    Optimal Parameters: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 100, 'random_state': 42}
-    
-
-# Update the model with optimal parameters 
-model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_samples_leaf= 3, 
-                                  min_samples_split= 5, n_estimators= 100, bootstrap=False, max_features= 'auto', random_state= 42)
-
-  # Update Random Forest
+- GridSearchCV: to obtain the best parameters for the model
+- Update the model with optimal parameters
   - Snapshot of comprehensive metrics
   - Calculate evaluation metrics with confusion matrices 
   - Evalute using the AUC ROC curve
+- Compare updated model to baeline random forest 
+
 
 # Plot the Confusion Matrix
 
