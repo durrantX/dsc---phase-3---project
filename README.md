@@ -260,10 +260,6 @@ The following are perfectly correlated due to the direct relationship between ch
 * Total day charge and total day minutes
 
 
-
-
-    
-
 # Preprocessing
 - Prepare data for modeling
 - **Create training and testing sets**
@@ -297,10 +293,10 @@ The following are perfectly correlated due to the direct relationship between ch
     Name: churn, dtype: int64
     1    1993
     0    1993
-    Name: churn, dtype: int64```
+    Name: churn, dtype: int64 ```
     
 - **Scaling**
- * Transform the numerical features of the dataset to a similar scale 
+   -  Transform the numerical features of the dataset to a similar scale 
 
 ## 2. Modeling
 - Build and evaluate four models
@@ -336,12 +332,12 @@ The following metrics will be used to evaluate the classifiers for both the trai
 This section provides a comparison of four different classification models utilizing different evaluation metrics.
 
                    
-| Model                   | Precision | Recall   | F1 Score | Accuracy | AUC Score    |
-|------------------- -----|-----------|----------|----------|----------|--------------|
-| **Logistic Regression** | 0.56     | 0.17      | 0.26    | 0.86    | **0.7453**   |
-| **KNN**                 | 0.70     | **0.41**      | **0.51**    | 0.89    | 0.6882   |    
-| **Decision Tree**       | 0.75     | 0.39      | **0.51**    | 0.858    |0.6847    |
-| **Random Forest**       | **0.88**     | 0.31      | 0.46    | **0.90**    |0.6538   |
+| Model                   | Precision | Recall    | F1 Score | Accuracy | AUC Score    |
+|------------------- -----|-----------|-----------|----------|----------|--------------|
+| **Logistic Regression** | 0.56      | 0.17      | 0.26     | 0.86     | **0.7453**   |
+| **KNN**                 | 0.70      | **0.41**  | **0.51** | 0.89     | 0.6882       |    
+| **Decision Tree**       | 0.75      | 0.39      | **0.51** | 0.858    |0.6847        |
+| **Random Forest**       | **0.88**  | 0.31      | 0.46     | **0.90** |0.6538        |
   
 
 
@@ -355,15 +351,16 @@ This section provides a comparison of four different classification models utili
  
  ##  Confusion Matrices Model Performance 
 
-| Model           | True Negatives (TN) | False Positives (FP) | False Negatives (FN) | True Positives (TP) |
-|-----------------|---------------------|----------------------|----------------------|---------------------|
-| Logistic Regression | 838             | 19                   | 119                  | 24                  |
-| KNN             | 832                 | 25                   | **85**               | **58**                  |
-| Decision Tree   | 838                 | 19                   | 87                   | 56                  |
-| Random Forest   | **851**             | **6**                 | 98                | 45                  |
+| Model               | True Negatives (TN) | False Positives (FP) | False Negatives (FN) | True Positives (TP) |
+|---------------------|---------------------|----------------------|----------------------|---------------------|
+| Logistic Regression | 838                 | 19                   | 119                  | 24                  |
+| KNN                 | 832                 | 25                   | **85**               | **58**              |
+| Decision Tree       | 838                 | 19                   | 87                   | 56                  |
+| Random Forest       | **851**             | **6**                | 98                   | 45                  |
 
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/3bf22d89-a153-4721-ae34-b69c461d6eef)
 
 
 From the chart, it is evident that:
@@ -372,16 +369,6 @@ From the chart, it is evident that:
 - Random Forest achieves the highest TN predicts 'No Churn' and the lowest FP, predicts 'Churn' but customer does not churn
 
 These comparisons assists in determining the appropriate model based on the specific requirements of sensitivity(true positive rate)  and specificity(true negative rate)  needed for this business problem.
-
-# Create visualization comparing models confusion matrices
-
-
-
-
-    
-![png](output_79_0.png)
-    
-
 
 # Model Selection and Tuning 
 
@@ -403,10 +390,6 @@ These comparisons assists in determining the appropriate model based on the spec
 # Baseline random forest parameters
 rf.get_params()
 ```
-
-
-
-
     {'bootstrap': True,
      'ccp_alpha': 0.0,
      'class_weight': None,
@@ -426,7 +409,6 @@ rf.get_params()
      'random_state': 1,
      'verbose': 0,
      'warm_start': False}
-
 
 
 
@@ -490,8 +472,8 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 
 
 
-    
-![png](output_88_0.png)
+    ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/27ecf82e-f435-4163-8a66-605dcfad3579)
+
     
 
 # Evalute using the AUC ROC curve
@@ -500,11 +482,8 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 
 # Plot ROC curve
 
-    
+    ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/5adb6ae4-87a3-425d-a757-22e6dda0fc14)
 
-
-    
-![png](output_90_1.png)
     
 
 
@@ -519,7 +498,7 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 | Recall    | 0.31 | 0.49     | +58.06%         |
 | F1-score  | 0.46 | 0.61     | +32.61%         |
 | Accuracy  | 90%  | 91%      | +1.11%          |
-|AUC Score  |0.65  |  0.73    | +12.31%           |
+|AUC Score  |0.65  |  0.73    | +12.31%         |
 
 
 
@@ -589,21 +568,10 @@ feature_importances
 
 
 
-
-
-# Visualize ranked feature importances 
-
-
-
-
-
-    
-![png](output_94_1.png)
-    
-
-
-
 # Analysis of the feature importance revealed the following:
+
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/c23fe541-12bc-4990-8ca4-69a694cf9662)
+
 
 **Daytime  usage**
 - Total Day Minutes( 0.167243) highest feature importance in the model, suggesting that the number of minutes customers use during the day is highly predictive of customer propensity to churn. 
