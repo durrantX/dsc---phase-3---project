@@ -344,7 +344,7 @@ Prepare data for modeling
 - In the testing  set the proportion  of churned customers to not churned  is 143 to 857
 - To address class imbalance Synthetic Minority Oversampling is used 
 
-# Address class imbalance using SMOTE 
+***Address class imbalance using SMOTE** 
 
     0    1993
     1     340
