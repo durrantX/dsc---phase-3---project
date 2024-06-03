@@ -85,15 +85,11 @@ Various classifiers and evaluation metrics will be used to objectively select th
 
 * Assess market segmentation to align with the company's goals of enhancing subscriber retention
 
-# Churn Distribution Analysis
-
-    
-![png](output_16_0.png)
-    
-
+# Variable Distribution Analysis
 
  **Churn Distribution Analysis**
- 
+ ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/4b76d24b-24af-46a9-bda6-980b4f32d598)
+
 * 483 instances labeled as "1"  (churned) is significantly lower than those labeled as "0" (2850) (not churned), this indicating a class imbalance in the churn variable
 * SyriaTel has a churn rate of 14.49% 
 
@@ -112,24 +108,19 @@ To address the imbalance issues resampling such as SMOTE will be considered
 
 
 # Area Code Distribution Analysis
-
-    
-![png](output_18_0.png)
-    
+  
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/fab5aa4d-46de-4122-b4be-2992a3109378)
 
 
-**Area Code Distribution Analysis**
 - 49.7% almost half of the customers are from 415 area code
 - 25% of the customers are in area code 510 and another 25% in area code 408
 
 
-# Boxplot to see which area code has the highest churn
+### Customer Service Calls Churn Analysis across area codes
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/650570b3-a4bb-41ea-9969-aee1742e341c)
 
-    
-![png](output_20_1.png)
-    
-**Customer Service Calls Churn Analysis**
+  
 * Customers who did not churn tend to have fewer customer service calls (median 1 to 2 calls)  across  area codes 408, 415, and 510.
 * Customers who churned show a higher number of customer service calls (median 2 to 3 calls) in all area codes. 
 * Customers who make more service calls are more likely to churn
@@ -155,13 +146,8 @@ Business implication
 
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/adb4e794-8ec7-4bc9-8610-794d04b5acef)
 
-    
-![png](output_23_1.png)
-    
-
-
-**International Subscribers  Churn  Distribution**
 
 * Out of the 3333 subscribers only 346 has an international plan about 10.38%
 
@@ -172,14 +158,8 @@ Business implication
 # Customer Loyalty Churn Analysis
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a0c2e8f5-8120-4ba9-aed1-f3fe238a2e1f)
 
-
-    
-![png](output_26_0.png)
-    
-
-
-**Customer Loyalty Churn Analysis**
 * Customer Loyalty= Account length,  how long customers has been with SyriaTel
 * high risk groups identified for customer duration between 51- 150
 * account lengths decline significantly after 150 days
@@ -202,36 +182,17 @@ Business implication
 
 
 
-# Visualize voice mail plan and churn status 
-
-
-
-
-
-    
-![png](output_29_1.png)
-    
-
 
 **Voice Mail Subscribers  Churn  Distribution**
+
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/0a44132b-e532-443e-b0d9-5b28910c80a5)
+
 
 - For customers without a voice mail plan: Churn percentage = 16.73%
 
 - For customers with a voice mail plan: Churn percentage = 8.67%
 
 **Usage Churn  Analysis**
-
-
-
-
-
-
-
-    total day charge    101864.17
-    churn                  483.00
-    dtype: float64
-
-
 
 
     Churn counts:
@@ -252,19 +213,13 @@ Business implication
     churn
     0    25667.31
     1     4460.76
-    Name: total night charge, dtype: float64
+    Name: total night charge, dtype: float64 
     
-
 
 
 # Compare churn and telephone charges across different times of the day.
 
-
-
-    
-![png](output_34_1.png)
-    
-
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/284357e9-7dbf-4b1f-899d-ecc28ae3bc17)
 
 **Day Usage Churn**
 
@@ -289,16 +244,8 @@ Business implication
 
 
 # Features correlation analysis
-# Visualize the correlation between variables
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/de694815-0c49-4352-b109-cc758d4466e1)
 
-
-
-    
-![png](output_36_0.png)
-    
-
-
-**Features Correlation Analysis**
 * The correlation values for **churn** seems to fall  below 0.3 for all features. 
 * Multiple variables are uncorrelated 
 
@@ -309,34 +256,24 @@ The following are perfectly correlated due to the direct relationship between ch
 * Total day charge and total day minutes
 
 
-
-
-    
-
 # Preprocessing
-
-Prepare data for modeling
-
-## Create training and testing sets
-
-- Define the predictor and target variables
-- Perform a standard train-test split. 
-- Assign 30% to the test set 
-- Set random_state ensuring  that the split is reproducible
-
-
-**Evaluate class imbalance**
-
-    Train:
+- Prepare data for modeling
+- **Create training and testing sets**
+   - Define the predictor and target variables
+   - Perform a standard train-test split. 
+   - Assign 30% to the test set 
+   - Set random_state ensuring  that the split is reproducible
+- **Evaluate class imbalance**
+   ```Train:
     
     0    1993
     1     340
-    Name: churn, dtype: int64
-    Test:
+   Name: churn, dtype: int64
+     Test:
     
     0    857
     1    143
-    Name: churn, dtype: int64
+    Name: churn, dtype: int64 
     
 
 **Class Imbalance evaluation**
@@ -344,30 +281,27 @@ Prepare data for modeling
 - In the testing  set the proportion  of churned customers to not churned  is 143 to 857
 - To address class imbalance Synthetic Minority Oversampling is used 
 
-***Address class imbalance using SMOTE** 
+# Address class imbalance using SMOTE 
 
     0    1993
     1     340
     Name: churn, dtype: int64
-    
-    
     1    1993
     0    1993
-    Name: churn, dtype: int64
-    
+    Name: churn, dtype: int64 '''
 
-**Scaling**
- * Transform the numerical features of the dataset to a similar scale 
+   
+- **Scaling**
+   -  Transform the numerical features of the dataset to a similar scale 
 
 ## 2. Modeling
-
-##   Model Development 1: Logistic Regression
-
-Build and evaluate a baseline Logistic Regression
-
-
-
-# Evaluation of the models
+- Build and evaluate four models
+  -  LogisticRegression
+  -  DecisionTreeClassifier
+  -  KNN
+  -  Random Forest  
+- **Evaluation of the models**
+  
 The following metrics will be used to evaluate the classifiers for both the training and test sets.
  - Precision: measures how accurate the positive predictions are.
  - Recall:  measures the model's ability to find all the relevant cases (positive cases)
@@ -387,151 +321,6 @@ The following metrics will be used to evaluate the classifiers for both the trai
  -  ROC curve evaluates how well the model discriminates between classes
  -  Instrumental in comparing the effectiveness of different models
 
-   **Evaluate the Logistic Regression predictive performance**
-  
-   
-
-
-
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.87      0.98      0.92      1993
-               1       0.54      0.13      0.21       340
-    
-        accuracy                           0.86      2333
-       macro avg       0.71      0.56      0.57      2333
-    weighted avg       0.82      0.86      0.82      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.88      0.98      0.93       857
-               1       0.59      0.17      0.26       143
-    
-        accuracy                           0.86      1000
-       macro avg       0.73      0.57      0.59      1000
-    weighted avg       0.83      0.86      0.83      1000
-    
-    Confusion Matrix:
-     [[840  17]
-     [119  24]]
-    
-
-     
-
-# Model Development 2: DecisionTreeClassifier
-
-
-
-**Evaluate the DecisionTreeClassifier predictive performance**
-
-    
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       1.00      0.91      0.95      2183
-               1       0.43      0.98      0.60       150
-    
-        accuracy                           0.92      2333
-       macro avg       0.72      0.95      0.78      2333
-    weighted avg       0.96      0.92      0.93      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.91      0.98      0.94       857
-               1       0.75      0.39      0.51       143
-    
-        accuracy                           0.89      1000
-       macro avg       0.83      0.68      0.73      1000
-    weighted avg       0.88      0.89      0.88      1000
-    
-    Confusion Matrix:
-     [[838  19]
-     [ 87  56]]
-    
-
-Model Comparison
-Compare to the logistic regression model the decision tree has higher accuracy, lower AUC and lower false negatives . 
-
-# Model Development 3: KNN
-
-
-**Evaluate the KNN predictive performance**
-
-
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.91      0.99      0.95      1993
-               1       0.85      0.42      0.56       340
-    
-        accuracy                           0.90      2333
-       macro avg       0.88      0.70      0.75      2333
-    weighted avg       0.90      0.90      0.89      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.90      0.98      0.94       857
-               1       0.73      0.36      0.48       143
-    
-        accuracy                           0.89      1000
-       macro avg       0.81      0.67      0.71      1000
-    weighted avg       0.88      0.89      0.87      1000
-    
-    Confusion Matrix:
-     [[838  19]
-     [ 92  51]]
-    
-
-# Model Development 4: Random Forest 
-Random forest ensemble method
-
-
-# **Evaluate the Random Forest predictive performance**
-
-
-
-# Snapshot of comprehensive metrics
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.90      1.00      0.95      1993
-               1       1.00      0.38      0.55       340
-    
-        accuracy                           0.91      2333
-       macro avg       0.95      0.69      0.75      2333
-    weighted avg       0.92      0.91      0.89      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.90      0.99      0.94       857
-               1       0.88      0.31      0.46       143
-    
-        accuracy                           0.90      1000
-       macro avg       0.89      0.65      0.70      1000
-    weighted avg       0.89      0.90      0.87      1000
-    
-    Confusion Matrix:
-     [[851   6]
-     [ 98  45]]
-    
-    
-
 # Analysis of  models performances and final model selection
  
 
@@ -539,14 +328,13 @@ Random forest ensemble method
 
 This section provides a comparison of four different classification models utilizing different evaluation metrics.
 
-
                    
-| Model                   | Precision | Recall   | F1 Score | Accuracy | AUC Score    |
-|------------------- -----|-----------|----------|----------|----------|--------------|
-| **Logistic Regression** | 0.56     | 0.17      | 0.26    | 0.86    | **0.7453**   |
-| **KNN**                 | 0.70     | **0.41**      | **0.51**    | 0.89    | 0.6882   |    
-| **Decision Tree**       | 0.75     | 0.39      | **0.51**    | 0.858    |0.6847    |
-| **Random Forest**       | **0.88**     | 0.31      | 0.46    | **0.90**    |0.6538   |
+| Model                   | Precision | Recall    | F1 Score | Accuracy | AUC Score    |
+|------------------- -----|-----------|-----------|----------|----------|--------------|
+| Logistic Regression| 0.56      | 0.17      | 0.26     | 0.86     | **0.7453**   |
+| KNN                | 0.70      | **0.41**  | **0.51** | 0.89     | 0.6882       |    
+| Decision Tree      | 0.75      | 0.39      | **0.51** | 0.858    |0.6847        |
+| Random Forest       | **0.88**  | 0.31      | 0.46     | **0.90** |0.6538        |
   
 
 
@@ -560,15 +348,16 @@ This section provides a comparison of four different classification models utili
  
  ##  Confusion Matrices Model Performance 
 
-| Model           | True Negatives (TN) | False Positives (FP) | False Negatives (FN) | True Positives (TP) |
-|-----------------|---------------------|----------------------|----------------------|---------------------|
-| Logistic Regression | 838             | 19                   | 119                  | 24                  |
-| KNN             | 832                 | 25                   | **85**               | **58**                  |
-| Decision Tree   | 838                 | 19                   | 87                   | 56                  |
-| Random Forest   | **851**             | **6**                 | 98                | 45                  |
+| Model               | True Negatives (TN) | False Positives (FP) | False Negatives (FN) | True Positives (TP) |
+|---------------------|---------------------|----------------------|----------------------|---------------------|
+| Logistic Regression | 838                 | 19                   | 119                  | 24                  |
+| KNN                 | 832                 | 25                   | **85**               | **58**              |
+| Decision Tree       | 838                 | 19                   | 87                   | 56                  |
+| Random Forest       | **851**             | **6**                | 98                   | 45                  |
 
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/3bf22d89-a153-4721-ae34-b69c461d6eef)
 
 
 From the chart, it is evident that:
@@ -577,16 +366,6 @@ From the chart, it is evident that:
 - Random Forest achieves the highest TN predicts 'No Churn' and the lowest FP, predicts 'Churn' but customer does not churn
 
 These comparisons assists in determining the appropriate model based on the specific requirements of sensitivity(true positive rate)  and specificity(true negative rate)  needed for this business problem.
-
-# Create visualization comparing models confusion matrices
-
-
-
-
-    
-![png](output_79_0.png)
-    
-
 
 # Model Selection and Tuning 
 
@@ -601,116 +380,24 @@ These comparisons assists in determining the appropriate model based on the spec
 
 **Hyperparameter Tuning** 
 
-- GridSearchCV: to obtain the best parameters for the model 
-
-
-
-# Baseline random forest parameters
-rf.get_params()
-```
-
-
-
-
-    {'bootstrap': True,
-     'ccp_alpha': 0.0,
-     'class_weight': None,
-     'criterion': 'gini',
-     'max_depth': 5,
-     'max_features': 'auto',
-     'max_leaf_nodes': None,
-     'max_samples': None,
-     'min_impurity_decrease': 0.0,
-     'min_impurity_split': None,
-     'min_samples_leaf': 1,
-     'min_samples_split': 2,
-     'min_weight_fraction_leaf': 0.0,
-     'n_estimators': 100,
-     'n_jobs': None,
-     'oob_score': False,
-     'random_state': 1,
-     'verbose': 0,
-     'warm_start': False}
-
-
-
-
-```python
-rf_param_grid = {
-    "n_estimators": [10, 30, 100],
-    "criterion": ["gini", "entropy"],
-    "max_depth": [None, 2, 6, 10],
-    "min_samples_split": [5, 10],
-    "min_samples_leaf": [3, 6],
-    'max_features': ['auto', 'sqrt', 'log2'],
-    'bootstrap': [True, False],
-    'random_state':[42]
-}
-
-`
-
-    Testing Accuracy: 90.40%
-    
-    Optimal Parameters: {'bootstrap': False, 'criterion': 'gini', 'max_depth': None, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 5, 'n_estimators': 100, 'random_state': 42}
-    
-
-# Update the model with optimal parameters 
-model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_samples_leaf= 3, 
-                                  min_samples_split= 5, n_estimators= 100, bootstrap=False, max_features= 'auto', random_state= 42)
-
-# Update Random Forest snapshot of comprehensive metrics
-
-
-
-# Calculate evaluation metrics with confusion matrices 
-
-
-    Classification Report (Training Set):
-                   precision    recall  f1-score   support
-    
-               0       0.97      1.00      0.98      1993
-               1       1.00      0.81      0.90       340
-    
-        accuracy                           0.97      2333
-       macro avg       0.98      0.91      0.94      2333
-    weighted avg       0.97      0.97      0.97      2333
-    
-    Classification Report (Testing Set):
-                   precision    recall  f1-score   support
-    
-               0       0.92      0.98      0.95       857
-               1       0.80      0.49      0.61       143
-    
-        accuracy                           0.91      1000
-       macro avg       0.86      0.73      0.78      1000
-    weighted avg       0.90      0.91      0.90      1000
-    
-    Confusion Matrix:
-     [[839  18]
-     [ 73  70]]
-    
+- GridSearchCV: to obtain the best parameters for the model
+- Update the model with optimal parameters
+  - Snapshot of comprehensive metrics
+  - Calculate evaluation metrics with confusion matrices 
+  - Evalute using the AUC ROC curve
+- Compare updated model to baeline random forest 
 
 
 # Plot the Confusion Matrix
 
 
-
-    
-![png](output_88_0.png)
-    
-
-# Evalute using the AUC ROC curve
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/1035c2ac-8fc7-42d7-92b5-5e7412fccf24)
 
 
 
 # Plot ROC curve
 
-    
-
-
-    
-![png](output_90_1.png)
-    
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a8dfb4f0-55de-4f51-a4b7-1be8b01f319d)
 
 
 # Model Improvement Analysis 
@@ -724,7 +411,7 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 | Recall    | 0.31 | 0.49     | +58.06%         |
 | F1-score  | 0.46 | 0.61     | +32.61%         |
 | Accuracy  | 90%  | 91%      | +1.11%          |
-|AUC Score  |0.65  |  0.73    | +12.31%           |
+|AUC Score  |0.65  |  0.73    | +12.31%         |
 
 
 
@@ -765,12 +452,7 @@ model_rf = RandomForestClassifier(criterion= 'gini', max_depth= None, min_sample
 
 
 **Feature importance**
-*  Examine the importance of each feature in the  model. 
-* Check the feature_importances_ attribute of the trained model 
-
-
-
-
+*  Examine the importance of each feature and contribution to model. 
 
 feature_importances
 
@@ -794,21 +476,10 @@ feature_importances
 
 
 
-
-
-# Visualize ranked feature importances 
-
-
-
-
-
-    
-![png](output_94_1.png)
-    
-
-
-
 # Analysis of the feature importance revealed the following:
+
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/c23fe541-12bc-4990-8ca4-69a694cf9662)
+
 
 **Daytime  usage**
 - Total Day Minutes( 0.167243) highest feature importance in the model, suggesting that the number of minutes customers use during the day is highly predictive of customer propensity to churn. 
