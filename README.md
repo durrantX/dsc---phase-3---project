@@ -72,10 +72,10 @@ Various classifiers and evaluation metrics will be used to objectively select th
     - total intl charge         
     - customer service calls    
     - Churn* 
-    
-  **Churn = the number of subscribers that leave the company** 
+     **Churn = the number of subscribers that leave the company** 
 
-**To ensure a robust response to the business query and deliver practical recommendations:**
+
+    **To ensure a robust response to the business query and deliver practical recommendations:**
 
 * Prioritize analysis of customer behavior and their tendency to continue as subscribers of Syriatel.
 
@@ -85,27 +85,15 @@ Various classifiers and evaluation metrics will be used to objectively select th
 
 * Assess market segmentation to align with the company's goals of enhancing subscriber retention
 
-
 # Churn Distribution Analysis
-churn_count=df['churn'].value_counts()
-churn_count
-```
-
-
-    0    2850
-    1     483
-    Name: churn, dtype: int64
-
-
-
-
 
     
 ![png](output_16_0.png)
     
 
 
-**Churn Distribution Analysis**
+ **Churn Distribution Analysis**
+ 
 * 483 instances labeled as "1"  (churned) is significantly lower than those labeled as "0" (2850) (not churned), this indicating a class imbalance in the churn variable
 * SyriaTel has a churn rate of 14.49% 
 
