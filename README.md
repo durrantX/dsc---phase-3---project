@@ -319,8 +319,13 @@ The following metrics will be used to evaluate the classifiers for both the trai
 
  -  Plots the true positive rate (sensitivity) on the y-axis against the false positive rate (1 - specificity) on the x-axis.
  -  ROC curve evaluates how well the model discriminates between classes
- -  Instrumental in comparing the effectiveness of different models
+ -  Instrumental in comparing the effectiveness of different models 
 
+**Confusion Matrix**
+
+  - Provides a thorough analysis of true positive, true negative, false positive, and false negative predictions
+  - Facilitates a profound comprehension of the overall effectiveness in class distinction
+  
 # Analysis of  models performances and final model selection
  
 
