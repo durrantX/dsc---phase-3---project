@@ -289,7 +289,8 @@ The following are perfectly correlated due to the direct relationship between ch
     Name: churn, dtype: int64
     1    1993
     0    1993
-    Name: churn, dtype: int64 
+    Name: churn, dtype: int64
+'''
     
 - **Scaling**
    -  Transform the numerical features of the dataset to a similar scale 
