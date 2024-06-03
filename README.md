@@ -217,12 +217,12 @@ Business implication
     churn
     0    25667.31
     1     4460.76
-    Name: total night charge, dtype: float64 ```
+    Name: total night charge, dtype: float64 
     
 
 
-
 # Compare churn and telephone charges across different times of the day.
+
 ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/284357e9-7dbf-4b1f-899d-ecc28ae3bc17)
 
 **Day Usage Churn**
