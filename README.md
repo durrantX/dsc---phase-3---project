@@ -85,16 +85,11 @@ Various classifiers and evaluation metrics will be used to objectively select th
 
 * Assess market segmentation to align with the company's goals of enhancing subscriber retention
 
-# Churn Distribution Analysis
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/3faa361d-c8dc-41fc-9854-3f2e58c27d73)
-
-    
-![png](output_16_0.png)
-    
-
+# Variable Distribution Analysis
 
  **Churn Distribution Analysis**
- 
+ ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/4b76d24b-24af-46a9-bda6-980b4f32d598)
+
 * 483 instances labeled as "1"  (churned) is significantly lower than those labeled as "0" (2850) (not churned), this indicating a class imbalance in the churn variable
 * SyriaTel has a churn rate of 14.49% 
 
@@ -113,26 +108,19 @@ To address the imbalance issues resampling such as SMOTE will be considered
 
 
 # Area Code Distribution Analysis
-
-    
-
-    
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/e4792a4a-269c-4672-9c0b-d5562fe0e11d)
+  
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/fab5aa4d-46de-4122-b4be-2992a3109378)
 
 
-**Area Code Distribution Analysis**
 - 49.7% almost half of the customers are from 415 area code
 - 25% of the customers are in area code 510 and another 25% in area code 408
 
 
-# Boxplot to see which area code has the highest churn
+### Customer Service Calls Churn Analysis across area codes
 
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/41b21498-3c46-4b8f-abd1-1c67ef28da71)
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/650570b3-a4bb-41ea-9969-aee1742e341c)
 
-    
-![png](output_20_1.png)
-    
-**Customer Service Calls Churn Analysis**
+  
 * Customers who did not churn tend to have fewer customer service calls (median 1 to 2 calls)  across  area codes 408, 415, and 510.
 * Customers who churned show a higher number of customer service calls (median 2 to 3 calls) in all area codes. 
 * Customers who make more service calls are more likely to churn
@@ -158,14 +146,8 @@ Business implication
 
 
 
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/c538047f-9a96-47bb-9e1d-08f82b5ca1c4)
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/adb4e794-8ec7-4bc9-8610-794d04b5acef)
 
-    
-
-    
-
-
-**International Subscribers  Churn  Distribution**
 
 * Out of the 3333 subscribers only 346 has an international plan about 10.38%
 
@@ -176,14 +158,8 @@ Business implication
 # Customer Loyalty Churn Analysis
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a0c2e8f5-8120-4ba9-aed1-f3fe238a2e1f)
 
-
-    
-![png](output_26_0.png)
-    
-
-
-**Customer Loyalty Churn Analysis**
 * Customer Loyalty= Account length,  how long customers has been with SyriaTel
 * high risk groups identified for customer duration between 51- 150
 * account lengths decline significantly after 150 days
@@ -206,18 +182,11 @@ Business implication
 
 
 
-# Visualize voice mail plan and churn status 
-
-
-
-
-
-    
-![png](output_29_1.png)
-    
-
 
 **Voice Mail Subscribers  Churn  Distribution**
+
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/0a44132b-e532-443e-b0d9-5b28910c80a5)
+
 
 - For customers without a voice mail plan: Churn percentage = 16.73%
 
@@ -262,13 +231,7 @@ Business implication
 
 
 # Compare churn and telephone charges across different times of the day.
-
-
-
-    
-![png](output_34_1.png)
-    
-
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/284357e9-7dbf-4b1f-899d-ecc28ae3bc17)
 
 **Day Usage Churn**
 
@@ -293,16 +256,8 @@ Business implication
 
 
 # Features correlation analysis
-# Visualize the correlation between variables
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/de694815-0c49-4352-b109-cc758d4466e1)
 
-
-
-    
-![png](output_36_0.png)
-    
-
-
-**Features Correlation Analysis**
 * The correlation values for **churn** seems to fall  below 0.3 for all features. 
 * Multiple variables are uncorrelated 
 
@@ -318,29 +273,24 @@ The following are perfectly correlated due to the direct relationship between ch
     
 
 # Preprocessing
+- Prepare data for modeling
+- **Create training and testing sets**
+ - Define the predictor and target variables
+ - Perform a standard train-test split. 
+ - Assign 30% to the test set 
+ - Set random_state ensuring  that the split is reproducible
+- **Evaluate class imbalance**
 
-Prepare data for modeling
-
-## Create training and testing sets
-
-- Define the predictor and target variables
-- Perform a standard train-test split. 
-- Assign 30% to the test set 
-- Set random_state ensuring  that the split is reproducible
-
-
-**Evaluate class imbalance**
-
-    Train:
+  ```Train:
     
     0    1993
     1     340
-    Name: churn, dtype: int64
-    Test:
+   Name: churn, dtype: int64
+     Test:
     
     0    857
     1    143
-    Name: churn, dtype: int64
+    Name: churn, dtype: int64 ```
     
 
 **Class Imbalance evaluation**
@@ -349,7 +299,7 @@ Prepare data for modeling
 - To address class imbalance Synthetic Minority Oversampling is used 
 
 # Address class imbalance using SMOTE 
-
+```
     0    1993
     1     340
     Name: churn, dtype: int64
@@ -357,10 +307,10 @@ Prepare data for modeling
     
     1    1993
     0    1993
-    Name: churn, dtype: int64
+    Name: churn, dtype: int64```
     
 
-**Scaling**
+- **Scaling**
  * Transform the numerical features of the dataset to a similar scale 
 
 ## 2. Modeling
