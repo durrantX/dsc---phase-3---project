@@ -194,10 +194,6 @@ Business implication
 
 **Usage Churn  Analysis**
 
-'''
-    total day charge    101864.17
-    churn                  483.00
-    dtype: float64
 
     Churn counts:
     0    2850
@@ -217,7 +213,7 @@ Business implication
     churn
     0    25667.31
     1     4460.76
-    Name: total night charge, dtype: float64 '''
+    Name: total night charge, dtype: float64 
     
 
 
