@@ -282,14 +282,14 @@ The following are perfectly correlated due to the direct relationship between ch
 - To address class imbalance Synthetic Minority Oversampling is used 
 
 # Address class imbalance using SMOTE 
- ```
-    0    1993
+   ''' 0    1993
     1     340
     Name: churn, dtype: int64
     1    1993
     0    1993
-    Name: churn, dtype: int64
-    
+    Name: churn, dtype: int64 '''
+
+   
 - **Scaling**
    -  Transform the numerical features of the dataset to a similar scale 
 
