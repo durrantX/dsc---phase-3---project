@@ -278,7 +278,7 @@ The following are perfectly correlated due to the direct relationship between ch
     
     0    857
     1    143
-    Name: churn, dtype: int64 ```
+    Name: churn, dtype: int64 
     
 
 **Class Imbalance evaluation**
@@ -293,7 +293,7 @@ The following are perfectly correlated due to the direct relationship between ch
     Name: churn, dtype: int64
     1    1993
     0    1993
-    Name: churn, dtype: int64 ```
+    Name: churn, dtype: int64 
     
 - **Scaling**
    -  Transform the numerical features of the dataset to a similar scale 
@@ -395,13 +395,14 @@ These comparisons assists in determining the appropriate model based on the spec
 # Plot the Confusion Matrix
 
 
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/1035c2ac-8fc7-42d7-92b5-5e7412fccf24)
 
-    ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/27ecf82e-f435-4163-8a66-605dcfad3579)
 
 
 # Plot ROC curve
 
-    ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/5adb6ae4-87a3-425d-a757-22e6dda0fc14)
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a8dfb4f0-55de-4f51-a4b7-1be8b01f319d)
+
 
 # Model Improvement Analysis 
 
@@ -455,16 +456,11 @@ These comparisons assists in determining the appropriate model based on the spec
 
 
 **Feature importance**
-*  Examine the importance of each feature in the  model. 
-* Check the feature_importances_ attribute of the trained model 
-
-
-
-
+*  Examine the importance of each feature and contribution to model. 
 
 feature_importances
 
-'''
+
     area code_408             0.004551
     area code_510             0.004961
     area code_415             0.008124
