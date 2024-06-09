@@ -424,7 +424,7 @@ These comparisons assists in determining the appropriate model based on the spec
 
 feature_importances
 
-|  Feature Importance                
+| Feature Importance     | Value     |
 |------------------------|----------|
 | area code_408          | 0.004551 |
 | area code_510          | 0.004961 |
