@@ -294,7 +294,7 @@ The following are perfectly correlated due to the direct relationship between ch
 - **Scaling**
    -  Transform the numerical features of the dataset to a similar scale 
 
-## 2. Modeling
+##  Modeling
 - Build and evaluate four models
   -  LogisticRegression
   -  DecisionTreeClassifier
@@ -325,7 +325,7 @@ The following metrics will be used to evaluate the classifiers for both the trai
 
   - Provides a thorough analysis of true positive, true negative, false positive, and false negative predictions
   - Facilitates a profound comprehension of the overall effectiveness in class distinction
-  
+
 # Analysis of  models performances and final model selection
  
 
