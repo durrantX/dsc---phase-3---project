@@ -136,16 +136,6 @@ Business implication
 
 
 
-
-    international plan  churn
-    no                  0        2664
-                        1         346
-    yes                 0         186
-                        1         137
-    dtype: int64
-
-
-
 ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/adb4e794-8ec7-4bc9-8610-794d04b5acef)
 
 
@@ -164,23 +154,7 @@ Business implication
 * high risk groups identified for customer duration between 51- 150
 * account lengths decline significantly after 150 days
 
-
-
-
-# Voice Mail Subscribers  Churn  Distribution
-
-
-
-
-
-    voice mail plan  churn
-    no               0        2008
-    yes              0         842
-    no               1         403
-    yes              1          80
-    dtype: int64
-
-
+ 
 
 
 **Voice Mail Subscribers  Churn  Distribution**
@@ -195,25 +169,25 @@ Business implication
 **Usage Churn  Analysis**
 
 
-    Churn counts:
-    0    2850
-    1     483
-    Name: churn, dtype: int64
-    Total Day Charge by churn status:
-    churn
-    0    84874.20
-    1    16989.97
-    Name: total day charge, dtype: float64
-    Total Evening Charge by churn status:
-    churn
-    0    48218.89
-    1     8720.55
-    Name: total eve charge, dtype: float64
-    Total Night Charge by churn status:
-    churn
-    0    25667.31
-    1     4460.76
-    Name: total night charge, dtype: float64 
+   Churn counts:
+0    2850
+1     483
+Name: churn, dtype: int64
+Total Day Charge by churn status:
+churn
+0    84874.20
+1    16989.97
+Name: total day charge, dtype: float64
+Total Evening Charge by churn status:
+churn
+0    48218.89
+1     8720.55
+Name: total eve charge, dtype: float64
+Total Night Charge by churn status:
+churn
+0    25667.31
+1     4460.76
+Name: total night charge, dtype: float64
     
 
 
@@ -264,31 +238,20 @@ The following are perfectly correlated due to the direct relationship between ch
    - Assign 30% to the test set 
    - Set random_state ensuring  that the split is reproducible
 - **Evaluate class imbalance**
-   ```Train:
-    
-    0    1993
-    1     340
-   Name: churn, dtype: int64
-     Test:
-    
-    0    857
-    1    143
-    Name: churn, dtype: int64 
-    
-
-**Class Imbalance evaluation**
+  
+   - **Class Imbalance evaluation**
 - In the training set the proportion  of churned customers to not churned  is 340 to 1993
 - In the testing  set the proportion  of churned customers to not churned  is 143 to 857
 - To address class imbalance Synthetic Minority Oversampling is used 
 
-**Address class imbalance using SMOTE**
-
-    0    1993
-    1     340
-    Name: churn, dtype: int64
-    1    1993
-    0    1993
-    Name: churn, dtype: int64 '''
+   - **Address class imbalance using SMOTE**
+| 0                            | 1993 |   |
+|------------------------------|------|---|
+| 1                            | 340  |   |
+| Name: churn, dtype: int64    |      |   |
+| 1                            | 1993 |   |
+| 0                            | 1993 |   |
+| Name: churn, dtype: int64 '' |      |   |
 
    
 - **Scaling**
@@ -461,23 +424,23 @@ These comparisons assists in determining the appropriate model based on the spec
 
 feature_importances
 
-
-    area code_408             0.004551
-    area code_510             0.004961
-    area code_415             0.008124
-    voice mail plan_no        0.026859
-    voice mail plan_yes       0.028602
-    total night charge        0.061461
-    international plan_no     0.063774
-    total night minutes       0.064528
-    international plan_yes    0.065110
-    total intl charge         0.067571
-    total intl minutes        0.074507
-    total eve minutes         0.097512
-    total eve charge          0.100384
-    total day charge          0.164814
-    total day minutes         0.167243
-    dtype: float64
+| Feature Importance                |
+|------------------------|----------|
+| area code_408          | 0.004551 |
+| area code_510          | 0.004961 |
+| area code_415          | 0.008124 |
+| voice mail plan_no     | 0.026859 |
+| voice mail plan_yes    | 0.028602 |
+| total night charge     | 0.061461 |
+| international plan_no  | 0.063774 |
+| total night minutes    | 0.064528 |
+| international plan_yes | 0.065110 |
+| total intl charge      | 0.067571 |
+| total intl minutes     | 0.074507 |
+| total eve minutes      | 0.097512 |
+| total eve charge       | 0.100384 |
+| total day charge       | 0.164814 |
+| total day minutes      | 0.167243 |
 
 
 
