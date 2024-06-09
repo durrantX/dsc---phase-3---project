@@ -245,8 +245,7 @@ The following are perfectly correlated due to the direct relationship between ch
 - To address class imbalance Synthetic Minority Oversampling is used 
 
    - **Address class imbalance using SMOTE**
-
-  | 0                            | 1993 |   |
+| 0                            | 1993 |   |
 |------------------------------|------|---|
 | 1                            | 340  |   |
 | Name: churn, dtype: int64    |      |   |
@@ -425,21 +424,23 @@ These comparisons assists in determining the appropriate model based on the spec
 
 feature_importances
 
-area code_408             0.004551
-area code_510             0.004961
-area code_415             0.008124
-voice mail plan_no        0.026859
-voice mail plan_yes       0.028602
-total night charge        0.061461
-international plan_no     0.063774
-total night minutes       0.064528
-international plan_yes    0.065110
-total intl charge         0.067571
-total intl minutes        0.074507
-total eve minutes         0.097512
-total eve charge          0.100384
-total day charge          0.164814
-total day minutes         0.167243
+| Feature Importance                |
+|------------------------|----------|
+| area code_408          | 0.004551 |
+| area code_510          | 0.004961 |
+| area code_415          | 0.008124 |
+| voice mail plan_no     | 0.026859 |
+| voice mail plan_yes    | 0.028602 |
+| total night charge     | 0.061461 |
+| international plan_no  | 0.063774 |
+| total night minutes    | 0.064528 |
+| international plan_yes | 0.065110 |
+| total intl charge      | 0.067571 |
+| total intl minutes     | 0.074507 |
+| total eve minutes      | 0.097512 |
+| total eve charge       | 0.100384 |
+| total day charge       | 0.164814 |
+| total day minutes      | 0.167243 |
 
 
 
