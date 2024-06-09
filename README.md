@@ -136,16 +136,6 @@ Business implication
 
 
 
-
-    international plan  churn
-    no                  0        2664
-                        1         346
-    yes                 0         186
-                        1         137
-    dtype: int64
-
-
-
 ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/adb4e794-8ec7-4bc9-8610-794d04b5acef)
 
 
@@ -164,23 +154,7 @@ Business implication
 * high risk groups identified for customer duration between 51- 150
 * account lengths decline significantly after 150 days
 
-
-
-
-# Voice Mail Subscribers  Churn  Distribution
-
-
-
-
-
-    voice mail plan  churn
-    no               0        2008
-    yes              0         842
-    no               1         403
-    yes              1          80
-    dtype: int64
-
-
+ 
 
 
 **Voice Mail Subscribers  Churn  Distribution**
@@ -195,25 +169,25 @@ Business implication
 **Usage Churn  Analysis**
 
 
-    Churn counts:
-    0    2850
-    1     483
-    Name: churn, dtype: int64
-    Total Day Charge by churn status:
-    churn
-    0    84874.20
-    1    16989.97
-    Name: total day charge, dtype: float64
-    Total Evening Charge by churn status:
-    churn
-    0    48218.89
-    1     8720.55
-    Name: total eve charge, dtype: float64
-    Total Night Charge by churn status:
-    churn
-    0    25667.31
-    1     4460.76
-    Name: total night charge, dtype: float64 
+   Churn counts:
+0    2850
+1     483
+Name: churn, dtype: int64
+Total Day Charge by churn status:
+churn
+0    84874.20
+1    16989.97
+Name: total day charge, dtype: float64
+Total Evening Charge by churn status:
+churn
+0    48218.89
+1     8720.55
+Name: total eve charge, dtype: float64
+Total Night Charge by churn status:
+churn
+0    25667.31
+1     4460.76
+Name: total night charge, dtype: float64
     
 
 
@@ -294,7 +268,7 @@ The following are perfectly correlated due to the direct relationship between ch
 - **Scaling**
    -  Transform the numerical features of the dataset to a similar scale 
 
-## 2. Modeling
+##  Modeling
 - Build and evaluate four models
   -  LogisticRegression
   -  DecisionTreeClassifier
