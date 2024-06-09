@@ -238,31 +238,21 @@ The following are perfectly correlated due to the direct relationship between ch
    - Assign 30% to the test set 
    - Set random_state ensuring  that the split is reproducible
 - **Evaluate class imbalance**
-   ```Train:
-    
-    0    1993
-    1     340
-   Name: churn, dtype: int64
-     Test:
-    
-    0    857
-    1    143
-    Name: churn, dtype: int64 
-    
-
-**Class Imbalance evaluation**
+  
+   - **Class Imbalance evaluation**
 - In the training set the proportion  of churned customers to not churned  is 340 to 1993
 - In the testing  set the proportion  of churned customers to not churned  is 143 to 857
 - To address class imbalance Synthetic Minority Oversampling is used 
 
-**Address class imbalance using SMOTE**
+   - **Address class imbalance using SMOTE**
 
-    0    1993
-    1     340
-    Name: churn, dtype: int64
-    1    1993
-    0    1993
-    Name: churn, dtype: int64 '''
+  | 0                            | 1993 |   |
+|------------------------------|------|---|
+| 1                            | 340  |   |
+| Name: churn, dtype: int64    |      |   |
+| 1                            | 1993 |   |
+| 0                            | 1993 |   |
+| Name: churn, dtype: int64 '' |      |   |
 
    
 - **Scaling**
@@ -435,23 +425,21 @@ These comparisons assists in determining the appropriate model based on the spec
 
 feature_importances
 
-
-    area code_408             0.004551
-    area code_510             0.004961
-    area code_415             0.008124
-    voice mail plan_no        0.026859
-    voice mail plan_yes       0.028602
-    total night charge        0.061461
-    international plan_no     0.063774
-    total night minutes       0.064528
-    international plan_yes    0.065110
-    total intl charge         0.067571
-    total intl minutes        0.074507
-    total eve minutes         0.097512
-    total eve charge          0.100384
-    total day charge          0.164814
-    total day minutes         0.167243
-    dtype: float64
+area code_408             0.004551
+area code_510             0.004961
+area code_415             0.008124
+voice mail plan_no        0.026859
+voice mail plan_yes       0.028602
+total night charge        0.061461
+international plan_no     0.063774
+total night minutes       0.064528
+international plan_yes    0.065110
+total intl charge         0.067571
+total intl minutes        0.074507
+total eve minutes         0.097512
+total eve charge          0.100384
+total day charge          0.164814
+total day minutes         0.167243
 
 
 
