@@ -164,29 +164,7 @@ Business implication
 
 **Usage Churn  Analysis**
 
-
-   Churn counts:
-0    2850
-1     483
-Name: churn, dtype: int64
-Total Day Charge by churn status:
-churn
-0    84874.20
-1    16989.97
-Name: total day charge, dtype: float64
-Total Evening Charge by churn status:
-churn
-0    48218.89
-1     8720.55
-Name: total eve charge, dtype: float64
-Total Night Charge by churn status:
-churn
-0    25667.31
-1     4460.76
-Name: total night charge, dtype: float64
     
-
-
 # Compare churn and telephone charges across different times of the day.
 
 ![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/284357e9-7dbf-4b1f-899d-ecc28ae3bc17)
