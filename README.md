@@ -1,11 +1,7 @@
 ## Final Project Submission
-
-Please fill out:
-* Student name: Deon Durrant
-* Student pace: self paced / part time / full time
-* Scheduled project review date/time: 
-* Instructor name: Mark  Bardour
-* Blog post URL:https://medium.com/@durrantdeon/basics-of-ensemble-methods-beb0b2aa250d
+## Subscriber Retention: Halting the Churn
+![alt text](image-1.png)
+*  Author: Deon Durrant
 
 
 # Business and Data Understanding
@@ -15,8 +11,7 @@ Please fill out:
 SyriaTel, a major telecommunications provider, is interested in minimizing resources expended on customers who are likely to terminate their services, a phenomenon known as churn.  Customers' churn  intentions maybe predictive by identifying and isolating patterns hidden in the data. 
 
 ## Data Understanding 
-
-To tackle the business problem  I will diligently search for a classifier to  unveil predictive patterns indicating customer inclination to discontinue doing business with SyriaTel. This  constitutes a binary classification endeavor.
+The dataset was retreived from kaggle.com and consist of 3333 entries, 21 columns.To tackle the business problem  I will diligently search for a classifier to  unveil predictive patterns indicating customer inclination to discontinue doing business with SyriaTel. This  constitutes a binary classification endeavor.
  
 **Classifiers**
 
@@ -244,14 +239,16 @@ The following are perfectly correlated due to the direct relationship between ch
 - In the testing  set the proportion  of churned customers to not churned  is 143 to 857
 - To address class imbalance Synthetic Minority Oversampling is used 
 
-   - **Address class imbalance using SMOTE**
-| 0                            | 1993 |   |
-|------------------------------|------|---|
-| 1                            | 340  |   |
-| Name: churn, dtype: int64    |      |   |
-| 1                            | 1993 |   |
-| 0                            | 1993 |   |
-| Name: churn, dtype: int64 '' |      |   |
+   - **Address class imbalance using SMOTE** 
+
+| Churn                       | Count |
+|-----------------------------|-------|
+| 0                           | 1993  |
+| 1                           | 340   |
+| Name: churn, dtype: int64   |       |
+| 0                           | 1993  |
+| 1                           | 1993  |
+| Name: churn, dtype: int64 ''|       |
 
    
 - **Scaling**
@@ -510,5 +507,7 @@ Based on the above analysis the following predictive recommendation are proposed
     - Utilize churn survey to gather data to understand why customers cancel their accounts.
     - Survey can identify issues and improve SyriaTel product
 
+For More Information
+See the full analysis in the Jupyter Notebook or review the presentation.
 
 
