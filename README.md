@@ -1,6 +1,7 @@
 ## Final Project Submission
 ## Subscriber Retention: Halting the Churn
-![alt text](image-1.png)
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a1f0edab-8496-4ecd-9dda-c4d5ec135aac)
+
 *  Author: Deon Durrant
 
 
