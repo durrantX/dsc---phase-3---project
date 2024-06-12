@@ -490,8 +490,8 @@ For More Information
 See the full analysis in the Jupyter Notebook or review the presentation.
 
 project_directory
-├── data
-├── .gitignore
-├── README.md
-├── SyriaTel Churn Analysis.ipynb
-└── presentation.pdf
+── data
+── .gitignore
+── README.md
+── SyriaTel Churn Analysis.ipynb
+── presentation.pdf
