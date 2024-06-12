@@ -488,6 +488,7 @@ Based on the above analysis the following predictive recommendation are proposed
 
 For More Information
 See the full analysis in the Jupyter Notebook or review the presentation.
+
 project_directory
  
 __ .gitignore
