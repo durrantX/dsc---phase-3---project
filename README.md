@@ -328,8 +328,8 @@ These comparisons assists in determining the appropriate model based on the spec
 - Update the model with optimal parameters
   - Snapshot of comprehensive metrics
   - Calculate evaluation metrics with confusion matrices 
-  - Evalute using the AUC ROC curve
-- Compare updated model to baeline random forest 
+  - Evaluate using the AUC ROC curve
+- Compare updated model to baseline random forest 
 
 
 # Plot the Confusion Matrix
