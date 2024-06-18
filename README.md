@@ -246,7 +246,7 @@ The following metrics will be used to evaluate the classifiers for both the trai
  - Recall:  measures the model's ability to find all the relevant cases (positive cases)
  - Accuracy: 
      - measures the overall correctness of the model
-     - most common metric for classification,  providing a solid holistic view of the overall performance of our model.
+     - most common metric for classification,  providing a solid holistic view of the overall performance of the model.
  - F1 score:  
      - Harmonic Mean of Precision and Recall, providing a single measure of efficacy
     - This means that the F1 score cannot be high without both precision and recall also being high. 
