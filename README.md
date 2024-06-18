@@ -486,13 +486,13 @@ Based on the above analysis the following predictive recommendation are proposed
     - Utilize churn survey to gather data to understand why customers cancel their accounts.
     - Survey can identify issues and improve SyriaTel product
 
-For More Information
+For More Information:
 
 See the full analysis in the Jupyter Notebook or review the presentation.
 
 project_directory
  
-__ .gitignore
+
 
 ── data
 
