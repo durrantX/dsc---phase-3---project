@@ -332,17 +332,6 @@ These comparisons assists in determining the appropriate model based on the spec
 - Compare updated model to baseline random forest 
 
 
-# Plot the Confusion Matrix
-
-
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/1035c2ac-8fc7-42d7-92b5-5e7412fccf24)
-
-
-
-# Plot ROC curve
-
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a8dfb4f0-55de-4f51-a4b7-1be8b01f319d)
-
 
 # Model Improvement Analysis 
 
@@ -380,6 +369,9 @@ These comparisons assists in determining the appropriate model based on the spec
 **AUC Score**
 * AUC score improved by approximately 12.31%. 
 * significant model  improvement, suggesting model_rf effectively enhances predictive performance.
+# Plot ROC curve
+
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a8dfb4f0-55de-4f51-a4b7-1be8b01f319d)
 
 ## Confusion Matrix Comparison
 
@@ -394,6 +386,8 @@ These comparisons assists in determining the appropriate model based on the spec
 * FN are reduced to 73, indicating better performance in catching positive cases compared to rf.
 * Significantly higher TP at 70, suggesting better effectiveness at identifying positive cases.
 
+# Plot the Confusion Matrix
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/1035c2ac-8fc7-42d7-92b5-5e7412fccf24)
 
 **Feature importance**
 *  Examine the importance of each feature and contribution to model. 
