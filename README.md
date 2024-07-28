@@ -246,7 +246,7 @@ The following metrics will be used to evaluate the classifiers for both the trai
  - Recall:  measures the model's ability to find all the relevant cases (positive cases)
  - Accuracy: 
      - measures the overall correctness of the model
-     - most common metric for classification,  providing a solid holistic view of the overall performance of our model.
+     - most common metric for classification,  providing a solid holistic view of the overall performance of the model.
  - F1 score:  
      - Harmonic Mean of Precision and Recall, providing a single measure of efficacy
     - This means that the F1 score cannot be high without both precision and recall also being high. 
@@ -328,20 +328,9 @@ These comparisons assists in determining the appropriate model based on the spec
 - Update the model with optimal parameters
   - Snapshot of comprehensive metrics
   - Calculate evaluation metrics with confusion matrices 
-  - Evalute using the AUC ROC curve
-- Compare updated model to baeline random forest 
+  - Evaluate using the AUC ROC curve
+- Compare updated model to baseline random forest 
 
-
-# Plot the Confusion Matrix
-
-
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/1035c2ac-8fc7-42d7-92b5-5e7412fccf24)
-
-
-
-# Plot ROC curve
-
-![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a8dfb4f0-55de-4f51-a4b7-1be8b01f319d)
 
 
 # Model Improvement Analysis 
@@ -380,6 +369,9 @@ These comparisons assists in determining the appropriate model based on the spec
 **AUC Score**
 * AUC score improved by approximately 12.31%. 
 * significant model  improvement, suggesting model_rf effectively enhances predictive performance.
+# Plot ROC curve
+
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/a8dfb4f0-55de-4f51-a4b7-1be8b01f319d)
 
 ## Confusion Matrix Comparison
 
@@ -394,6 +386,8 @@ These comparisons assists in determining the appropriate model based on the spec
 * FN are reduced to 73, indicating better performance in catching positive cases compared to rf.
 * Significantly higher TP at 70, suggesting better effectiveness at identifying positive cases.
 
+# Plot the Confusion Matrix
+![image](https://github.com/durrantX/dsc---phase-3---project/assets/148919288/1035c2ac-8fc7-42d7-92b5-5e7412fccf24)
 
 **Feature importance**
 *  Examine the importance of each feature and contribution to model. 
@@ -486,12 +480,13 @@ Based on the above analysis the following predictive recommendation are proposed
     - Utilize churn survey to gather data to understand why customers cancel their accounts.
     - Survey can identify issues and improve SyriaTel product
 
-For More Information
+For More Information:
+
 See the full analysis in the Jupyter Notebook or review the presentation.
 
 project_directory
  
-__ .gitignore
+
 
 ── data
 
